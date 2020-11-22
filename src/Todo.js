@@ -8,10 +8,10 @@ import {
 } from "@material-ui/core";
 import { Edit, Delete } from "@material-ui/icons";
 
-function Todo({ id, task, completed, removeTodo }) {
+function Todo({ id, task, completed, removeTodo, toggleTodo }) {
   return (
     <ListItem>
-      <Checkbox checked={completed} />
+      <Checkbox checked={completed} onClick={() => toggleTodo(id)} />
       <ListItemText
         style={{ textDecoration: completed ? "line-through" : "none" }}
       >
