@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useInputState = (initialValue) => {
+function useInputState(initialValue) {
   const [value, setValue] = useState(initialValue);
 
   const handleChange = (e) => {
@@ -12,6 +12,6 @@ const useInputState = (initialValue) => {
   };
 
   return [value, handleChange, reset];
-};
+}
 
 export default useInputState;
