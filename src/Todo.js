@@ -13,7 +13,7 @@ import { Edit, Delete } from "@material-ui/icons";
 function Todo({ id, task, completed, removeTodo, toggleTodo, updateTodo }) {
   const [isEditing, toggle] = useToggleState(false);
   return (
-    <ListItem>
+    <ListItem style={{ height: "64px" }}>
       {isEditing ? (
         <EditTodo updateTodo={updateTodo} task={task} id={id} toggle={toggle} />
       ) : (
