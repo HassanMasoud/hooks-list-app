@@ -9,11 +9,11 @@ import {
   IconButton,
 } from "@material-ui/core";
 import { Edit, Delete } from "@material-ui/icons";
-import { TodosContext } from "./contexts/todos.context";
+import { DispatchContext } from "./contexts/todos.context";
 
 function Todo({ id, task, completed }) {
   const [isEditing, toggle] = useToggleState(false);
-  const { dispatch } = useContext(TodosContext);
+  const dispatch = useContext(DispatchContext);
   return (
     <ListItem style={{ height: "64px" }}>
       {isEditing ? (
